@@ -1,0 +1,21 @@
+<%= form_tag "/pets", method: :post do%>
+  <div>
+    <%= label_tag :pet_type, "Type of Pet:"%>
+    <%= text_field_tag :pet_type %>
+  </div>
+  <div>
+    <%= label_tag :name, "Name of Pet:"%>
+    <%= text_field_tag :name%>
+  </div>
+  <div>
+    <%= label_tag :age, "Age of Pet:"%>
+    <%= text_field_tag :age %>
+  </div>
+  <div>
+    <%= label_tag :description, "Description of the Pet:"%>
+    <%= text_area_tag :description %>
+  </div>
+  </div>
+    <%= submit_tag "Add Your Pet!"%> 
+  </div>
+<%end%>
