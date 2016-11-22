@@ -1,3 +1,4 @@
 <%=@pet.name%>
 <%=@pet.pet_type%>
 <%=@pet.age%>
+<%= link_to "Delete", "/pets/#{@pet.id}", method: :delete%>

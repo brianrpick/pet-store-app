@@ -19,7 +19,8 @@ class PetsController < ApplicationController
   end
 
   def update
-    @pet = Pet.new(name: params[:name], pet_type: params[:pet_type], age: params[:age], description: params[:description])
+    @pet = Pet.find_by(id: params[:id])
+    @pet = Pet.assign_attributes(name: params[:name], pet_type: params[:pet_type], age: params[:age], description: params[:description])
     @pet.save
     redirect_to "/pets/#{@pet.id}"
   end
